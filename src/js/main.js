@@ -62,4 +62,17 @@ $(document).ready(() => {
     $('.menu-overlay').removeClass('show');
     $('html').removeClass('is-hidden');
   });
+
+  if ($('.side').length > 0) {
+    $(document).on('click', '.side-heading-name', () => {
+      $('.side-overlay').removeClass('hidden');
+      $('html').addClass('is-hidden');
+    });
+
+    $(document).on('click', '.side-heading-arr', () => {
+      $('.side-overlay').addClass('hidden');
+      $('html').removeClass('is-hidden');
+    });
+    console.log('hello');
+  }
 });
