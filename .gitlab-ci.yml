@@ -1,0 +1,11 @@
+deploy:
+  stage: deploy
+  when: always
+  tags:
+    - dev-server
+  script:
+    - deploy --host spilna-spraga
+  only:
+    - main
+  after_script:
+    - deploy --host notifications

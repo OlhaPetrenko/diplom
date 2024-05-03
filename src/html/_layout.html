@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    {% include './components/_page-head.html' %}
+  </head>
+
+  <body class="{{ body_class }}">
+    <div class="fluid-wrapper">{% block content %} {% endblock %}</div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    {# Then add any custom js or explicitely for page #} {% block footer_scripts
+    %} {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,63 @@
+@import 'components/_reset';
+@import 'components/_fonts';
+@import 'components/_mixins';
+@import 'components/_helpers';
+
+// @import 'components/_footer';
+
+@import 'pages/_index';
+// @import 'pages/_rules';
+// @import 'pages/_index';
+
+html,
+body {
+  font-family: 'Inter';
+  font-weight: 400;
+
+  // overflow-x: hidden;
+  color: #2a2d34;
+  &.is-hidden {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1340px;
+  @include md {
+    padding: 0 40px;
+  }
+  @include sm {
+    padding: 0 30px;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
