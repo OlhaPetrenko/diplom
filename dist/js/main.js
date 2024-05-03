@@ -19,12 +19,6 @@ $(document).ready(function () {
     $('body').addClass('is-hidden');
     $(this).fadeIn(1);
     $(this).addClass('is-open');
-
-    // hotfix for zoomer inside modal
-    window.PinchZoomer.remove();
-    $('.controlHolder').remove();
-    window.PinchZoomer.init();
-    return this;
   };
   $.fn.modalClose = function () {
     $(this).fadeOut(1);

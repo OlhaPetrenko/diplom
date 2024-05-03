@@ -5,7 +5,10 @@
   </head>
 
   <body class="{{ body_class }}">
-    <div class="fluid-wrapper">{% block content %} {% endblock %}</div>
+    <div class="fluid-wrapper">
+      {% block content %} {% endblock %} {% include './modals/_exit-popup.html'
+      %}
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"

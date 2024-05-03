@@ -2,7 +2,7 @@
 @import 'components/_fonts';
 @import 'components/_mixins';
 @import 'components/_helpers';
-
+@import 'components/_popup';
 // @import 'components/_footer';
 
 @import 'pages/_index';
@@ -40,13 +40,13 @@ a {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 50px;
-  max-width: 1340px;
+  // padding: 0 50px;
+  max-width: 1300px;
   @include md {
-    padding: 0 40px;
+    // padding: 0 40px;
   }
   @include sm {
-    padding: 0 30px;
+    // padding: 0 30px;
   }
 }
 .visually-hidden {

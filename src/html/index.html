@@ -199,7 +199,11 @@ content %}
             </li>
 
             <li class="side-list-item">
-              <button type="button" class="side-list-btn">
+              <button
+                type="button"
+                class="side-list-btn js-modal-link"
+                data-target="exit-popup"
+              >
                 <svg
                   width="26"
                   height="28"
@@ -222,150 +226,172 @@ content %}
     </div>
   </aside>
   <section class="section-main">
-    <div class="section-main-heading">
-      <h2 class="section-titile">Користувачі</h2>
-      <div class="search-input-wrapper">
-        <input type="text" placeholder="Пошук" class="search-input" />
-        <div class="search-icon">
-          <img src="./images/icons/search.svg" alt="search icon" />
+    <div class="container">
+      <div class="section-main-heading">
+        <h2 class="section-titile">Користувачі</h2>
+        <div class="search-input-wrapper">
+          <input type="text" placeholder="Пошук" class="search-input" />
+          <div class="search-icon">
+            <img src="./images/icons/search.svg" alt="search icon" />
+          </div>
         </div>
       </div>
+      <table class="user-table">
+        <thead class="user-table-head">
+          <tr>
+            <th>#</th>
+            <th>ПІБ</th>
+            <th>Роль</th>
+            <th>123</th>
+          </tr>
+        </thead>
+
+        <tbody class="user-table-body">
+          <tr class="user-table-row">
+            <td>1</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Головний адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+
+          <tr class="user-table-row">
+            <td>2</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+
+          <tr class="user-table-row">
+            <td>3</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+
+          <tr class="user-table-row">
+            <td>4</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+
+          <tr class="user-table-row">
+            <td>5</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+
+          <tr class="user-table-row">
+            <td>6</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+
+          <tr class="user-table-row">
+            <td>7</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+
+          <tr class="user-table-row">
+            <td>9</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+
+          <tr class="user-table-row">
+            <td>9</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+
+          <tr class="user-table-row">
+            <td>10</td>
+            <td>Ніколаєв Валентин Петрович</td>
+            <td>Адміністратор</td>
+            <td>
+              <div class="user-table-icons">
+                <img src="./images/icons/pen.svg" alt="icon pen" />
+                <img src="./images/icons/delete.svg" alt="icon delete" />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="section-main-bottom">
+        <div class="pagination-wrapper">
+          <div class="pagination-arr">
+            <img src="./images/icons/arr-prev.svg" alt="arrow" />
+          </div>
+          <ul class="paginstion-list">
+            <li class="paginstion-item current"><a href="/">1</a></li>
+            <li class="paginstion-item"><a href="/">2</a></li>
+            <li class="paginstion-item"><a href="/">3</a></li>
+            <li class="paginstion-item">
+              <span>...</span>
+            </li>
+            <li class="paginstion-item"><a href="/">8</a></li>
+            <li class="paginstion-item"><a href="/">9</a></li>
+            <li class="paginstion-item"><a href="/">10</a></li>
+          </ul>
+
+          <div class="pagination-arr">
+            <img src="./images/icons/arr-next.svg" alt="arrow" />
+          </div>
+        </div>
+        <button type="button" class="add-btn">Додати запис</button>
+      </div>
     </div>
-    <table class="user-table">
-      <thead class="user-table-head">
-        <tr>
-          <th>#</th>
-          <th>ПІБ</th>
-          <th>Роль</th>
-          <th>123</th>
-        </tr>
-      </thead>
-
-      <tbody class="user-table-body">
-        <tr class="user-table-row">
-          <td>1</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Головний адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-
-        <tr class="user-table-row">
-          <td>2</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-
-        <tr class="user-table-row">
-          <td>3</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-
-        <tr class="user-table-row">
-          <td>4</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-
-        <tr class="user-table-row">
-          <td>5</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-
-        <tr class="user-table-row">
-          <td>6</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-
-        <tr class="user-table-row">
-          <td>7</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-
-        <tr class="user-table-row">
-          <td>9</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-
-        <tr class="user-table-row">
-          <td>9</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-
-        <tr class="user-table-row">
-          <td>10</td>
-          <td>Ніколаєв Валентин Петрович</td>
-          <td>Адміністратор</td>
-          <td>
-            <div class="user-table-icons">
-              <img src="./images/icons/pen.svg" alt="icon pen" />
-              <img src="./images/icons/delete.svg" alt="icon delete" />
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <!-- <div class="form-wrapper"></div> -->
-    <!-- <div class="container"></div> -->
   </section>
 </main>
-{% include './components/_footer.html' %} {% endblock %} {% block footer_scripts
-%} {% endblock %}
+{% endblock %} {% block footer_scripts %} {% endblock %}
