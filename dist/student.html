@@ -258,171 +258,237 @@
   </div>
 </aside>
 
-  <section class="section-main">
+  <section class="student-section">
     <div class="container">
-      <div class="section-main-heading">
-        <h2 class="section-titile">Користувачі</h2>
-        <div class="search-input-wrapper">
-          <input type="text" placeholder="Пошук" class="search-input" />
-          <div class="search-icon">
-            <img src="./images/icons/search.svg" alt="search icon" />
-          </div>
-        </div>
+      <div class="student-heading">
+        <a href="/" class="go-back-link"
+          ><img src="./images/icons/arr-back.svg" alt="arrow back"
+        /></a>
+
+        <h2 class="section-titile">Студент (-ка)</h2>
       </div>
-      <table class="user-table">
-        <thead class="user-table-head">
-          <tr>
-            <th>#</th>
-            <th>ПІБ</th>
-            <th>Роль</th>
-            <th>123</th>
-          </tr>
-        </thead>
 
-        <tbody class="user-table-body">
-          <tr class="user-table-row">
-            <td>1</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Головний адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
+      <div class="student-form-wrapper">
+        <div class="student-form">
+          <div class="student-form-inner">
+            <div class="student-form-field third error">
+              <label for="name" class="student-form-label">Ім’я</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ім’я"
+                class="student-form-input"
+                autocomplete="off"
+              />
+              <span class="student-form-error-text"
+                >Обов’якове для заповнення поле</span
+              >
+            </div>
+
+            <div class="student-form-field third">
+              <label for="surname" class="student-form-label">Прізвище</label>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                placeholder="Прізвище"
+                class="student-form-input"
+                autocomplete="off"
+              />
+              <span class="student-form-error-text"
+                >Обов’якове для заповнення поле</span
+              >
+            </div>
+
+            <div class="student-form-field third">
+              <label for="middleName" class="student-form-label"
+                >По батькові</label
+              >
+              <input
+                type="text"
+                id="middleName"
+                name="middleName"
+                placeholder="По батькові"
+                class="student-form-input"
+                autocomplete="off"
+              />
+              <span class="student-form-error-text"
+                >Обов’якове для заповнення поле</span
+              >
+            </div>
+
+            <div class="student-form-field half">
+              <label for="email" class="student-form-label">Пошта</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Пошта"
+                class="student-form-input"
+                autocomplete="off"
+              />
+              <span class="student-form-error-text"
+                >Обов’якове для заповнення поле</span
+              >
+            </div>
+            <div class="student-form-field half error">
+              <label for="tel" class="student-form-label">Номер телефону</label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="+380 (22) 111 22 33"
+                class="student-form-input"
+                autocomplete="off"
+              />
+              <span class="student-form-error-text"
+                >Обов’якове для заповнення поле</span
+              >
+            </div>
+            <div class="student-form-field half">
+              <span class="student-form-label">Фото студента (-ки)</span>
+              <div class="student-form-file-field">
+                <label
+                  for="fileInput"
+                  id="fileInputLabel"
+                  class="student-form-label-file"
+                >
+                  <span>Додати файл</span>
+                  <img src="./images/icons/file.svg" alt="file icon" />
+                </label>
+                <input
+                  type="file"
+                  class="student-form-input-file"
+                  id="fileInput"
+                  name="file"
+                />
+
+                <div class="student-form-field-file-selected" id="selectedFile">
+                  <div
+                    class="student-form-selected-file"
+                    id="selectedFileName"
+                  ></div>
+                  <img
+                    src="/images/icons/cross.svg"
+                    alt="i"
+                    id="removeSelectedFile"
+                  />
+                </div>
+                <span class="student-form-error-text"
+                  >Обов’якове для заповнення поле</span
+                >
               </div>
-            </td>
-          </tr>
-
-          <tr class="user-table-row">
-            <td>2</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
+            </div>
+            <div class="student-form-field-radio-wrapper">
+              <div class="student-form-field half">
+                <span class="student-form-label">Академ. відпуска</span>
+                <div class="student-form-field-radio">
+                  <label>
+                    <input type="radio" name="vacation" value="Так" />
+                    Так
+                  </label>
+                  <label>
+                    <input type="radio" name="vacation" value="Ні" checked />
+                    Ні
+                  </label>
+                </div>
               </div>
-            </td>
-          </tr>
 
-          <tr class="user-table-row">
-            <td>3</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
+              <div class="student-form-field half">
+                <span class="student-form-label">Гуртожиток</span>
+                <div class="student-form-field-radio">
+                  <label>
+                    <input type="radio" name="hostel" value="Так" />
+                    Так
+                  </label>
+                  <label>
+                    <input type="radio" name="hostel" value="Ні" checked />
+                    Ні
+                  </label>
+                </div>
               </div>
-            </td>
-          </tr>
+            </div>
 
-          <tr class="user-table-row">
-            <td>4</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
-              </div>
-            </td>
-          </tr>
+            <div class="student-form-field third">
+              <label for="group" class="student-form-label">Група</label>
+              <select id="group" name="group" class="student-form-input">
+                <option value="1КГ-07" selected>1КГ-07</option>
+                <option value="2КГ-07">2КГ-07</option>
+                <option value="3КГ-07">3КГ-07</option>
+                <option value="4КГ-07">4КГ-07</option>
+              </select>
+            </div>
+            <div class="student-form-field third">
+              <label for="date" class="student-form-label">Дата вступу</label>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                class="student-form-input"
+              />
+            </div>
+            <div class="student-form-field third">
+              <label for="course" class="student-form-label"
+                >Зарахований на курс</label
+              >
+              <select id="course" name="course" class="student-form-input">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
 
-          <tr class="user-table-row">
-            <td>5</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
-              </div>
-            </td>
-          </tr>
+            <div class="student-form-field third">
+              <label for="educationForm" class="student-form-label"
+                >Форма навчання</label
+              >
+              <select
+                id="educationForm"
+                name="educationForm"
+                class="student-form-input"
+              >
+                <option value="Денна" selected>Денна</option>
+                <option value="Заочна">Заочна</option>
+                <option value="Дистанційна">Дистанційна</option>
+                <option value="Денна4">Денна4</option>
+              </select>
+            </div>
+            <div class="student-form-field third">
+              <label for="financing" class="student-form-label"
+                >Основа фінансування</label
+              >
+              <select
+                id="financing"
+                name="financing"
+                class="student-form-input"
+              >
+                <option value="Контракт" selected>Контракт</option>
+                <option value="Державна">Державна</option>
+                <option value="Контракт2">Контракт2</option>
+                <option value="Контракт4">Контракт4</option>
+              </select>
+            </div>
 
-          <tr class="user-table-row">
-            <td>6</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
-              </div>
-            </td>
-          </tr>
-
-          <tr class="user-table-row">
-            <td>7</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
-              </div>
-            </td>
-          </tr>
-
-          <tr class="user-table-row">
-            <td>9</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
-              </div>
-            </td>
-          </tr>
-
-          <tr class="user-table-row">
-            <td>9</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
-              </div>
-            </td>
-          </tr>
-
-          <tr class="user-table-row">
-            <td>10</td>
-            <td>Ніколаєв Валентин Петрович</td>
-            <td>Адміністратор</td>
-            <td>
-              <div class="user-table-icons">
-                <img src="./images/icons/pen.svg" alt="icon pen" />
-                <img src="./images/icons/delete.svg" alt="icon delete" />
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="section-main-bottom">
-        <div class="pagination-wrapper">
-          <div class="pagination-arr">
-            <img src="./images/icons/arr-prev.svg" alt="arrow" />
-          </div>
-          <ul class="paginstion-list">
-            <li class="paginstion-item current"><a href="/">1</a></li>
-            <li class="paginstion-item"><a href="/">2</a></li>
-            <li class="paginstion-item"><a href="/">3</a></li>
-            <li class="paginstion-item">
-              <span>...</span>
-            </li>
-            <li class="paginstion-item"><a href="/">8</a></li>
-            <li class="paginstion-item"><a href="/">9</a></li>
-            <li class="paginstion-item"><a href="/">10</a></li>
-          </ul>
-
-          <div class="pagination-arr">
-            <img src="./images/icons/arr-next.svg" alt="arrow" />
+            <div class="student-form-field third">
+              <label for="Enrollment" class="student-form-label"
+                >Тип зарахування</label
+              >
+              <select
+                id="Enrollment"
+                name="Enrollment"
+                class="student-form-input"
+              >
+                <option value="Конкурс" selected>Конкурс</option>
+                <option value="Конкурс1">Конкурс1</option>
+                <option value="Конкурс2">Конкурс2</option>
+                <option value="Конкурс3">Конкурс3</option>
+              </select>
+            </div>
           </div>
         </div>
-        <button type="button" class="add-btn">Додати запис</button>
       </div>
     </div>
   </section>

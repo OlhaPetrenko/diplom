@@ -67,6 +67,27 @@ $(document).ready(() => {
       $('.side-overlay').addClass('hidden');
       $('html').removeClass('is-hidden');
     });
-    console.log('hello');
+  }
+
+  // ============== form add file
+  if (document.querySelector('.student-form')) {
+    const inputFile = document.getElementById('fileInput');
+    const selectedFileName = document.getElementById('selectedFileName');
+    const selectedFile = document.getElementById('selectedFile');
+    const fileInputLabel = document.getElementById('fileInputLabel');
+    if (inputFile) {
+      inputFile.addEventListener('change', () => {
+        fileInputLabel.style.display = 'none';
+
+        selectedFileName.innerHTML = inputFile.files[0].name;
+        selectedFile.classList.add('show');
+      });
+
+      $('#removeSelectedFile').on('click', () => {
+        fileInputLabel.style.display = 'flex';
+        selectedFile.classList.remove('show');
+        inputFile.value = '';
+      });
+    }
   }
 });
