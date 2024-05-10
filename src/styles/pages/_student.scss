@@ -13,6 +13,9 @@
   height: 100%;
   padding: 40px 60px 40px 140px;
   //   overflow: auto;
+  .container {
+    height: 100%;
+  }
 }
 
 .student-heading {
@@ -31,9 +34,14 @@
   border-radius: 4px;
   padding: 16px;
   margin-bottom: 30px;
+  height: 80%;
 }
 
 .student-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 80px);
 }
 .student-form-inner {
   display: flex;
@@ -42,7 +50,8 @@
   flex-wrap: wrap;
 
   padding-right: 16px;
-  max-height: 520px;
+  height: 100%;
+  //   max-height: 520px;
   overflow-y: auto;
 
   &::-webkit-scrollbar {
@@ -55,10 +64,7 @@
     border-radius: 4px;
   }
 }
-// third
-// half
-// error
-// quarter
+
 .student-form-field {
   position: relative;
   display: flex;
@@ -193,33 +199,6 @@
   }
 }
 
-.student-submit-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 13px 24px;
-  border-radius: 8px;
-  background: var(--Blue, #4c4cf2);
-  border: none;
-
-  font-family: 'RF Dewi Expanded';
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 22px; /* 157.143% */
-  text-transform: uppercase;
-  color: var(--White, #fff);
-  cursor: pointer;
-  @include md {
-    font-size: 11px;
-  }
-  @include sm {
-  }
-  &:hover {
-    background: var(--Blue-Light, #1e88e5);
-  }
-}
 .student-form-field-radio-wrapper {
   display: flex;
   justify-content: space-between;
@@ -229,4 +208,78 @@
   display: flex;
   gap: 30px;
   align-items: center;
+}
+.student-form-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.student-form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 121%; /* 19.36/16 */
+  text-align: left;
+  color: #ffffff;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 300ms ease;
+  &.delete {
+    width: 46px;
+    background: #e34f4f;
+  }
+  &.submit {
+    width: 118px;
+    background: #68d34d;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.student-form-search-result {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid #878787;
+  border-top: none;
+  background: var(--white, #fafafa);
+  padding: 15px 20px;
+  z-index: 5;
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+.student-form-search-result-list {
+  padding-top: 2px;
+  max-height: 100px;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: #8bb7d6;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #005a9a;
+    border-radius: 4px;
+  }
+}
+.student-form-search-result-item {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 121%; /* 19.36/16 */
+  color: #2a2d34;
+  margin-bottom: 8px;
 }
