@@ -1,0 +1,85 @@
+.create-edit-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.create-edit-popup-close {
+  cursor: pointer;
+}
+
+.create-edit-popup-form {
+  margin-top: 30px;
+}
+
+.create-edit-popup-input-big {
+  width: 53.888889vw; /* 776/1440 */
+}
+
+.create-edit-popup-input-label {
+  display: block;
+  color: #2a2d34;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  margin-bottom: 15px;
+}
+
+.create-edit-popup-input {
+  font-size: 16px;
+  width: 100%;
+  padding: 12px 9px;
+  border-radius: 10px;
+  border: 1px solid #8bb7d6;
+  background: #ffffff;
+}
+
+.create-edit-popup-input-small {
+  width: 26.111111vw; /* 376/1440 */
+}
+
+.create-edit-popup-inputs {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-edit-popup-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 121%; /* 19.36/16 */
+  text-align: left;
+  color: #ffffff;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 300ms ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+
+.create-edit-popup-control-save {
+  width: 118px;
+  background: #68d34d;
+}
+
+.create-edit-popup-control-delete {
+  width: 46px;
+  background: #e34f4f;
+}
+
+.create-edit-popup-btn-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}

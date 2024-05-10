@@ -90,4 +90,12 @@ $(document).ready(() => {
       });
     }
   }
+
+  //
+  if (document.querySelector('.student-form')) {
+    $('#father, #mother, #guardian').on('input', function () {
+      const newValue = $(this).val();
+      $(this).attr('value', newValue);
+    });
+  }
 });

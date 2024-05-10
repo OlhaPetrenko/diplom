@@ -422,7 +422,13 @@
             <img src="./images/icons/arr-next.svg" alt="arrow" />
           </div>
         </div>
-        <button type="button" class="add-btn">Додати запис</button>
+        <button
+          type="button"
+          class="add-btn js-modal-link"
+          data-target="create-area-of-knowledge-popup"
+        >
+          Додати запис
+        </button>
       </div>
     </div>
   </section>
@@ -436,6 +442,74 @@
       <button type="button" class="popup-btn-stay">Залишитись</button>
       <button type="button" class="popup-btn-exit">Вийти</button>
     </div>
+  </div>
+</div>
+ <div
+  class="modal modal--sm js-modal"
+  data-modal="create-area-of-knowledge-popup"
+>
+  <div class="modal-overlay js-close-modal"></div>
+  <div class="popup-content">
+    <div class="create-edit-popup-header">
+      <h3 class="popup-title">Нова галузь знань</h3>
+      <div class="create-edit-popup-close js-close-modal">
+        <img src="/images/icons/close-icon.svg" alt="close" />
+      </div>
+    </div>
+    <form class="create-edit-popup-form">
+      <fieldset class="create-edit-popup-input-big">
+        <label
+          for="area-of-knowledge-name"
+          class="create-edit-popup-input-label"
+          >Назва галузі знань</label
+        >
+        <input
+          id="area-of-knowledge-name"
+          type="text"
+          class="create-edit-popup-input"
+        />
+      </fieldset>
+      <div class="create-edit-popup-inputs">
+        <fieldset class="create-edit-popup-input-small">
+          <label
+            for="area-of-knowledge-number"
+            class="create-edit-popup-input-label"
+            >Номер галузі знань</label
+          >
+          <input
+            id="area-of-knowledge-number"
+            type="text"
+            class="create-edit-popup-input"
+          />
+        </fieldset>
+        <fieldset class="create-edit-popup-input-small">
+          <label
+            for="area-of-knowledge-abr"
+            class="create-edit-popup-input-label"
+            >Абрівіатура спеціальності</label
+          >
+          <input
+            id="area-of-knowledge-abr"
+            type="text"
+            class="create-edit-popup-input"
+          />
+        </fieldset>
+      </div>
+      <div class="create-edit-popup-btn-wrapper">
+        <button
+          type="button"
+          class="create-edit-popup-control create-edit-popup-control-delete"
+        >
+          <img src="/images/icons/trash-icon.svg" alt="trash" />
+        </button>
+        <button
+          type="button"
+          class="create-edit-popup-control create-edit-popup-control-save"
+        >
+          Зберігти
+        </button>
+      </div>
+    </form>
   </div>
 </div>
     </div>

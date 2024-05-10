@@ -83,6 +83,14 @@ $(document).ready(function () {
       });
     }
   }
+
+  //
+  if (document.querySelector('.student-form')) {
+    $('#father, #mother, #guardian').on('input', function () {
+      var newValue = $(this).val();
+      $(this).attr('value', newValue);
+    });
+  }
 });
 /******/ })()
 ;
