@@ -119,4 +119,9 @@ $(document).ready(() => {
         .attr('value', $(this).text().trim());
     }
   );
+
+  //  видалення елемента при кликові на img
+  $('.student-form-selected-option img').click(function () {
+    $(this).parent().remove();
+  });
 });

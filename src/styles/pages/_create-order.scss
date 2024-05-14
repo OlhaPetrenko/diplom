@@ -1,0 +1,29 @@
+.order-form-field-radio-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.student-form-selected-options {
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  display: none;
+  &.show {
+    display: flex;
+  }
+}
+.student-form-selected-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 40px;
+  border: 1px solid #8bb7d6;
+  background: #ffffff;
+
+  img {
+    display: block;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+}

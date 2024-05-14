@@ -102,6 +102,11 @@ $(document).ready(function () {
     currentField.find('.student-form-input').val($(this).text().trim());
     currentField.find('.student-form-input').attr('value', $(this).text().trim());
   });
+
+  //  видалення елемента при кликові на img
+  $('.student-form-selected-option img').click(function () {
+    $(this).parent().remove();
+  });
 });
 /******/ })()
 ;

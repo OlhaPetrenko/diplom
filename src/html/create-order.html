@@ -15,13 +15,15 @@ content %}
       <div class="student-form">
         <div class="student-form-wrapper">
           <div class="student-form-inner">
-            <div class="student-form-field third error">
-              <label for="name" class="student-form-label">Ім’я</label>
+            <div class="student-form-field error">
+              <label for="orderName" class="student-form-label"
+                >Повна назва наказу</label
+              >
               <input
                 type="text"
-                id="name"
-                name="name"
-                placeholder="Ім’я"
+                id="orderName"
+                name="orderName"
+                placeholder="Повна назва наказу"
                 class="student-form-input"
                 autocomplete="off"
               />
@@ -31,12 +33,14 @@ content %}
             </div>
 
             <div class="student-form-field third">
-              <label for="surname" class="student-form-label">Прізвище</label>
+              <label for="orderNumber" class="student-form-label"
+                >Наказ #</label
+              >
               <input
                 type="text"
-                id="surname"
-                name="surname"
-                placeholder="Прізвище"
+                id="orderNumber"
+                name="orderNumber"
+                placeholder="Наказ #"
                 class="student-form-input"
                 autocomplete="off"
               />
@@ -46,14 +50,29 @@ content %}
             </div>
 
             <div class="student-form-field third">
-              <label for="middleName" class="student-form-label"
-                >По батькові</label
+              <label for="orderSigning" class="student-form-label"
+                >Дата підписання</label
               >
               <input
-                type="text"
-                id="middleName"
-                name="middleName"
-                placeholder="По батькові"
+                type="date"
+                id="orderSigning"
+                name="orderSigning"
+                class="student-form-input"
+                autocomplete="off"
+              />
+              <span class="student-form-error-text"
+                >Обов’якове для заповнення поле</span
+              >
+            </div>
+
+            <div class="student-form-field third">
+              <label for="orderValid" class="student-form-label"
+                >Від якої дати дійсний</label
+              >
+              <input
+                type="date"
+                id="orderValid"
+                name="orderValid"
                 class="student-form-input"
                 autocomplete="off"
               />
@@ -63,36 +82,7 @@ content %}
             </div>
 
             <div class="student-form-field half">
-              <label for="email" class="student-form-label">Пошта</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Пошта"
-                class="student-form-input"
-                autocomplete="off"
-                disabled
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-            <div class="student-form-field half error">
-              <label for="tel" class="student-form-label">Номер телефону</label>
-              <input
-                type="tel"
-                id="tel"
-                name="tel"
-                placeholder="+380 (22) 111 22 33"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-            <div class="student-form-field half">
-              <span class="student-form-label">Фото студента (-ки)</span>
+              <span class="student-form-label">Наказ</span>
               <div class="student-form-file-field">
                 <label
                   for="fileInput"
@@ -106,7 +96,7 @@ content %}
                   type="file"
                   class="student-form-input-file"
                   id="fileInput"
-                  name="file"
+                  name="orderFile"
                 />
 
                 <div class="student-form-field-file-selected" id="selectedFile">
@@ -125,495 +115,107 @@ content %}
                 >
               </div>
             </div>
-            <div class="student-form-field-radio-wrapper">
-              <div class="student-form-field half">
-                <span class="student-form-label">Академ. відпуска</span>
-                <div class="student-form-field-radio">
-                  <label>
-                    <input type="radio" name="vacation" value="Так" />
-                    Так
-                  </label>
-                  <label>
-                    <input type="radio" name="vacation" value="Ні" checked />
-                    Ні
-                  </label>
-                </div>
-              </div>
-
-              <div class="student-form-field half">
-                <span class="student-form-label">Гуртожиток</span>
-                <div class="student-form-field-radio">
-                  <label>
-                    <input type="radio" name="hostel" value="Так" />
-                    Так
-                  </label>
-                  <label>
-                    <input type="radio" name="hostel" value="Ні" checked />
-                    Ні
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <div class="student-form-field third">
-              <label for="group" class="student-form-label">Група</label>
-              <select id="group" name="group" class="student-form-input">
-                <option value="1КГ-07" selected>1КГ-07</option>
-                <option value="2КГ-07">2КГ-07</option>
-                <option value="3КГ-07">3КГ-07</option>
-                <option value="4КГ-07">4КГ-07</option>
-              </select>
-            </div>
-            <div class="student-form-field third">
-              <label for="date" class="student-form-label">Дата вступу</label>
-              <input
-                type="date"
-                id="date"
-                name="date"
-                class="student-form-input"
-              />
-            </div>
-            <div class="student-form-field third">
-              <label for="course" class="student-form-label"
-                >Зарахований на курс</label
-              >
-              <select id="course" name="course" class="student-form-input">
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
-
-            <div class="student-form-field third">
-              <label for="educationForm" class="student-form-label"
-                >Форма навчання</label
-              >
-              <select
-                id="educationForm"
-                name="educationForm"
-                class="student-form-input"
-              >
-                <option value="Денна" selected>Денна</option>
-                <option value="Заочна">Заочна</option>
-                <option value="Дистанційна">Дистанційна</option>
-                <option value="Денна4">Денна4</option>
-              </select>
-            </div>
-            <div class="student-form-field third">
-              <label for="financing" class="student-form-label"
-                >Основа фінансування</label
-              >
-              <select
-                id="financing"
-                name="financing"
-                class="student-form-input"
-              >
-                <option value="Контракт" selected>Контракт</option>
-                <option value="Державна">Державна</option>
-                <option value="Контракт2">Контракт2</option>
-                <option value="Контракт4">Контракт4</option>
-              </select>
-            </div>
-            <div class="student-form-field third">
-              <label for="Enrollment" class="student-form-label"
-                >Тип зарахування</label
-              >
-              <select
-                id="Enrollment"
-                name="Enrollment"
-                class="student-form-input"
-                disabled
-              >
-                <option value="Конкурс" selected>Конкурс</option>
-                <option value="Конкурс1">Конкурс1</option>
-                <option value="Конкурс2">Конкурс2</option>
-                <option value="Конкурс3">Конкурс3</option>
-              </select>
-            </div>
-
-            <div class="student-form-field third">
-              <label for="birth" class="student-form-label"
-                >Дата народження</label
-              >
-              <input
-                type="date"
-                id="birth"
-                name="birth"
-                class="student-form-input"
-              />
-            </div>
-            <div class="student-form-field third">
-              <label for="passportID" class="student-form-label"
-                >ID паспорта</label
-              >
-              <input
-                type="text"
-                id="passportID"
-                name="passportID"
-                placeholder="ID паспорта"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-            <div class="student-form-field third">
-              <label for="passportSeries" class="student-form-label"
-                >Серія паспорта</label
-              >
-              <input
-                type="text"
-                id="passportSeries"
-                name="passportSeries"
-                placeholder="Серія паспорта"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
 
             <div class="student-form-field half">
-              <label for="passportAuthority" class="student-form-label"
-                >Ким виданий паспорт</label
-              >
-              <input
-                type="text"
-                id="passportAuthority"
-                name="passportAuthority"
-                placeholder="Ким виданий паспорт"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
+              <label for="signed" class="student-form-label">Підписано</label>
+              <select id="signed" name="signed" class="student-form-input">
+                <option value="18 Скорнякова О.В." selected>
+                  18 Скорнякова О.В.
+                </option>
+                <option value="11 Скорнякова О.В.">11 Скорнякова О.В.</option>
+                <option value="12 Скорнякова О.В.">12 Скорнякова О.В.</option>
+                <option value="13 Скорнякова О.В.">13 Скорнякова О.В.</option>
+              </select>
             </div>
-            <div class="student-form-field half">
-              <label for="passporDate" class="student-form-label"
-                >Дата видачі паспорта</label
-              >
-              <input
-                type="date"
-                id="passporDate"
-                name="passporDate"
-                class="student-form-input"
-              />
-            </div>
-
-            <div class="student-form-field third">
-              <label for="studentNumber" class="student-form-label"
-                >Номер серії студ. квитка</label
-              >
-              <input
-                type="text"
-                id="studentNumber"
-                name="studentNumber"
-                placeholder="Номер серії студ. квитка"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-            <div class="student-form-field third">
-              <label for="studentIssue" class="student-form-label"
-                >Виданий</label
-              >
-              <input
-                type="date"
-                id="studentIssue"
-                name="studentIssue"
-                class="student-form-input"
-              />
-            </div>
-            <div class="student-form-field third">
-              <label for="studentUntil" class="student-form-label"
-                >Дійсний до</label
-              >
-              <input
-                type="date"
-                id="studentUntil"
-                name="studentUntil"
-                class="student-form-input"
-              />
-            </div>
-
-            <div class="student-form-field half">
-              <label for="inn" class="student-form-label"
-                >Ідентифікаційний код</label
-              >
-              <input
-                type="text"
-                id="inn"
-                name="inn"
-                placeholder="Ідентифікаційний код"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-            <div class="student-form-field half">
-              <label for="school" class="student-form-label"
-                >Навчальний заклад</label
-              >
-              <input
-                type="text"
-                id="school"
-                name="school"
-                placeholder="Навчальний заклад"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-
-            <div class="student-form-field search third">
-              <label for="father" class="student-form-label">Батько</label>
-              <input
-                type="text"
-                id="father"
-                name="father"
-                placeholder="Введіть ПІБ або номер телефону"
-                class="student-form-input"
-                autocomplete="off"
-                value=""
-              />
-              <div class="student-form-search-result">
-                <ul class="student-form-search-result-list">
-                  <li class="student-form-search-result-item">
-                    search-result1
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result2
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result3
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result4
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result5
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result6
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result7
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result8
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result9
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result10
-                  </li>
-                </ul>
+            <div class="student-form-field">
+              <!-- <span class="student-form-label"></span> -->
+              <div class="student-form-field-radio">
+                <label>
+                  <input
+                    type="radio"
+                    name="orderConcern"
+                    value="Наказ стосується групи"
+                  />
+                  Наказ стосується групи
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="orderConcern"
+                    value="Наказ стосується студента"
+                    checked
+                  />
+                  Наказ стосується студента
+                </label>
               </div>
-
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-            <div class="student-form-field search third">
-              <label for="mother" class="student-form-label">Мати</label>
-              <input
-                type="text"
-                id="mother"
-                name="mother"
-                placeholder="Введіть ПІБ або номер телефону"
-                class="student-form-input"
-                autocomplete="off"
-                value=""
-              />
-              <div class="student-form-search-result">
-                <ul class="student-form-search-result-list">
-                  <li class="student-form-search-result-item">
-                    search-result1
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result2
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result3
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result4
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result5
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result6
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result7
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result8
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result9
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result10
-                  </li>
-                </ul>
-              </div>
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-            <div class="student-form-field search third">
-              <label for="guardian" class="student-form-label">Опікун</label>
-              <input
-                type="text"
-                id="guardian"
-                name="guardian"
-                placeholder="Введіть ПІБ або номер телефону"
-                class="student-form-input"
-                autocomplete="off"
-                value=""
-              />
-
-              <div class="student-form-search-result show">
-                <ul class="student-form-search-result-list">
-                  <li class="student-form-search-result-item">
-                    search-result1
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result2
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result3
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result4
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result5
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result6
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result7
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result8
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result9
-                  </li>
-                  <li class="student-form-search-result-item">
-                    search-result10
-                  </li>
-                </ul>
-              </div>
-
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
             </div>
 
             <div class="student-form-field">
-              <label for="Місце проживання" class="student-form-label"
-                >Місце проживання</label
+              <label for="orderGroupName" class="student-form-label"
+                >Групи</label
               >
-              <input
-                type="text"
-                id="Місце проживання"
-                name="Місце проживання"
-                placeholder="Місце проживання"
-                class="student-form-input"
-                autocomplete="off"
-                value=""
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
 
-            <div class="student-form-field third">
-              <label for="educationDocNumber" class="student-form-label"
-                >Номер документу про освіту</label
-              >
-              <input
-                type="text"
-                id="educationDocNumber"
-                name="educationDocNumber"
-                placeholder="Номер документу про освіту"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-            <div class="student-form-field third">
-              <label for="educationDocSeries" class="student-form-label"
-                >Серія документу про освіту</label
-              >
-              <input
-                type="text"
-                id="educationDocSeries"
-                name="educationDocSeries"
-                placeholder="Серія документу про освіту"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
-            <div class="student-form-field third">
-              <label for="graduationDate " class="student-form-label"
-                >Дата випуску з навчального закладу</label
-              >
-              <input
-                type="date"
-                id="graduationDate"
-                name="graduationDate"
-                class="student-form-input"
-                autocomplete="off"
-              />
-              <span class="student-form-error-text"
-                >Обов’якове для заповнення поле</span
-              >
-            </div>
+              <select required class="student-form-input" id="orderGroupName">
+                <option value="" disabled selected hidden>
+                  Введіть назву групи
+                </option>
+                <option value="11 Скорнякова О.В.">11 Скорнякова О.В.</option>
+                <option value="12 Скорнякова О.В.">12 Скорнякова О.В.</option>
+                <option value="13 Скорнякова О.В.">13 Скорнякова О.В.</option>
+              </select>
 
-            <div class="student-form-field half">
-              <label for="language " class="student-form-label"
-                >Мова, яку вивчав (-ла)</label
+              <ul class="student-form-selected-options show">
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+                <li class="student-form-selected-option">
+                  <span>4КГ-07</span
+                  ><img src="./images/icons/cross.svg" alt="cross icon" />
+                </li>
+              </ul>
+
+              <span class="student-form-error-text"
+                >Обов’якове для заповнення поле</span
               >
-              <select id="language" name="language" class="student-form-input">
-                <option value="Англійська" selected>Англійська</option>
-                <option value="Іспанська">Іспанська</option>
-                <option value="Німецька">Німецька</option>
-                <option value="Польська">Польська</option>
-              </select>
             </div>
-            <div class="student-form-field half">
-              <label for="benefits " class="student-form-label">Пільги</label>
-              <select id="benefits" name="benefits" class="student-form-input">
-                <option value="Вдсутні" selected>Вдсутні</option>
-                <option value="Багатодітна родина">Багатодітна родина</option>
-                <option value="Багатодітна родина2">Багатодітна родина2</option>
-                <option value="Багатодітна родина4">Багатодітна родина3</option>
-              </select>
-            </div>
+            <!-- === -->
           </div>
         </div>
 

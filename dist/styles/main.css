@@ -295,8 +295,8 @@ table {
   overflow: auto;
 }
 .side-content-top .side-list::-webkit-scrollbar {
-  width: 4px;
-  background-color: #8bb7d6;
+  width: 5px;
+  background-color: #d6d6d6;
   border-radius: 4px;
 }
 .side-content-top .side-list::-webkit-scrollbar-thumb {
@@ -868,6 +868,37 @@ table td {
   line-height: 121%; /* 19.36/16 */
   color: #2a2d34;
   margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.order-form-field-radio-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.student-form-selected-options {
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  display: none;
+}
+.student-form-selected-options.show {
+  display: flex;
+}
+
+.student-form-selected-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 40px;
+  border: 1px solid #8bb7d6;
+  background: #ffffff;
+}
+.student-form-selected-option img {
+  display: block;
+  width: 12px;
+  height: 12px;
   cursor: pointer;
 }
 
