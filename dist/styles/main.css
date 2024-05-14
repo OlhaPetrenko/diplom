@@ -290,7 +290,18 @@ table {
 }
 .side-content-top .side-list {
   height: calc(100% - 65px);
+  max-height: 400px;
   justify-content: flex-start;
+  overflow: auto;
+}
+.side-content-top .side-list::-webkit-scrollbar {
+  width: 4px;
+  background-color: #8bb7d6;
+  border-radius: 4px;
+}
+.side-content-top .side-list::-webkit-scrollbar-thumb {
+  background-color: #005a9a;
+  border-radius: 4px;
 }
 
 .side-content-bottom {
@@ -857,6 +868,7 @@ table td {
   line-height: 121%; /* 19.36/16 */
   color: #2a2d34;
   margin-bottom: 8px;
+  cursor: pointer;
 }
 
 html,

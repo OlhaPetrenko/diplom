@@ -257,10 +257,12 @@
   padding: 15px 20px;
   z-index: 5;
   display: none;
+
   &.show {
     display: block;
   }
 }
+
 .student-form-search-result-list {
   padding-top: 2px;
   max-height: 100px;
@@ -282,4 +284,5 @@
   line-height: 121%; /* 19.36/16 */
   color: #2a2d34;
   margin-bottom: 8px;
+  cursor: pointer;
 }

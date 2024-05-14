@@ -62,6 +62,10 @@ $(document).ready(function () {
       $('.side-overlay').addClass('hidden');
       $('html').removeClass('is-hidden');
     });
+
+    // if ($('.side-overlay ').hasClass('hidden')) {
+    //   $('.side-list-link span').css('display', 'none');
+    // }
   }
 
   // ============== form add file
@@ -91,6 +95,13 @@ $(document).ready(function () {
       $(this).attr('value', newValue);
     });
   }
+  $('.student-form-field').on('click', '.student-form-search-result-item', function () {
+    var currentField = $(this).closest('.student-form-field');
+    currentField.find('.student-form-search-result-item').removeClass('is-selected');
+    $(this).addClass('is-selected');
+    currentField.find('.student-form-input').val($(this).text().trim());
+    currentField.find('.student-form-input').attr('value', $(this).text().trim());
+  });
 });
 /******/ })()
 ;
