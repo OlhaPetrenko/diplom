@@ -95,12 +95,27 @@ $(document).ready(function () {
       $(this).attr('value', newValue);
     });
   }
+
+  //
   $('.student-form-field').on('click', '.student-form-search-result-item', function () {
     var currentField = $(this).closest('.student-form-field');
     currentField.find('.student-form-search-result-item').removeClass('is-selected');
     $(this).addClass('is-selected');
-    currentField.find('.student-form-input').val($(this).text().trim());
-    currentField.find('.student-form-input').attr('value', $(this).text().trim());
+    var selectedText = $(this).text().trim();
+    var selectedId = $(this).data('id');
+    currentField.find('.student-form-input').val(selectedText);
+    currentField.find('.student-form-input').attr('value', selectedId);
+    currentField.find('.student-form-input').prop('disabled', true);
+    var clearButton = $('<span class="clear-button">&#10006;</span>');
+    currentField.find('.student-form-input').after(clearButton);
+    clearButton.on('click', function () {
+      currentField.find('.student-form-input').val('');
+      currentField.find('.student-form-input').attr('value', '');
+      currentField.find('.student-form-input').prop('disabled', false);
+      clearButton.remove();
+    });
+    currentField.find('.student-form-search-result-list').empty();
+    currentField.find('.student-form-search-result').removeClass('show');
   });
 
   //  видалення елемента при кликові на img

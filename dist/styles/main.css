@@ -871,6 +871,14 @@ table td {
   cursor: pointer;
 }
 
+.clear-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 20;
+}
+
 .order-form-field-radio-wrapper {
   display: flex;
   gap: 20px;
